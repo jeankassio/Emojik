@@ -20,6 +20,10 @@ It features smooth category scrolling, persistent skin tones, automatic recents,
 
 ---
 
+## Demo
+
+[CodePen](https://codepen.io/jeankassio/pen/VYexMGB)
+
 ## Installation
 
 Include the script directly in your HTML:
