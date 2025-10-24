@@ -295,7 +295,7 @@
 			this.list.innerHTML = '';
 
 			const tabs = [{
-				name: 'Recentes',
+				name: 'Recent',
 				menuemoji: '23F3',
 				isRecent: true
 			}];
