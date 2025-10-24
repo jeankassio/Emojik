@@ -1,6 +1,19 @@
+/*!
+ * Emojik v0.9.2
+ * by Jean Kássio
+ *
+ * More info:
+ * https://jeankassio.dev
+ *
+ * Copyright Jean Kássio
+ * Released under the MIT license
+ * https://github.com/jeankassio/Emojik/blob/main/LICENSE 
+ *
+ * @preserve
+ */ 
 (function() {
-	const RECENT_KEY = 'emojik_recents_v0_9';
-	const SKIN_PREF_KEY = 'emojik_skin_pref_v0_9';
+	const RECENT_KEY = 'emojik_recents_v0_9_2';
+	const SKIN_PREF_KEY = 'emojik_skin_pref_v0_9_2';
 	const TTL = 7 * 24 * 3600 * 1000;
 
 	class Emojik {
@@ -14,7 +27,11 @@
 				width: '100%',
 				height: '100%',
 				fontFamily: '"Noto Color Emoji", "Segoe UI Emoji", system-ui',
-				fonturl: 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji'
+				fonturl: 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji',
+				i18n: {
+					search: "Search...",
+					recent: "Recent"
+				}
 			}, options);
 
 			this.defaultConfig = [{
@@ -185,7 +202,7 @@
 			this.root.innerHTML = `
 				<div class="ek-top">
 				  <div class="ek-tabs"></div>
-				  <input type="text" class="ek-search" placeholder="Search...">
+				  <input type="text" class="ek-search" placeholder="${this.opts.i18n.search}">
 				</div>
 				<div class="ek-list"></div>
 			`;
@@ -307,7 +324,7 @@
 			const recentSection = document.createElement('div');
 			recentSection.className = 'ek-section';
 			recentSection.dataset.name = 'Recent';
-			recentSection.innerHTML = `<h4>Recent</h4><div class="ek-grid"></div>`;
+			recentSection.innerHTML = `<h4>${this.opts.i18n.recent}</h4><div class="ek-grid"></div>`;
 			const recentGrid = recentSection.querySelector('.ek-grid');
 
 			for (const savedHex of recents) {
@@ -562,7 +579,7 @@
 			this.recents = trimmed;
 
 			// re-render Recentes grid
-			const recentSection = this.list.querySelector('.ek-section[data-name="Recentes"]') || this.list.children[0];
+			const recentSection = this.list.querySelector('.ek-section[data-name="Recent"]') || this.list.children[0];
 			if (recentSection) {
 				const grid = recentSection.querySelector('.ek-grid');
 				if (grid) {
