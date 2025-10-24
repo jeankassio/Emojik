@@ -27,6 +27,10 @@ Include the script directly in your HTML:
 ```html
 <script src="emojik.min.js"></script>
 ```
+OR
+```html
+<script src="https://cdn.jsdelivr.net/gh/jeankassio/Emojik@main/emojik.min.js"></script>
+```
 
 ## Basic Usage
 
