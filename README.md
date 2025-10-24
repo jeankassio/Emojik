@@ -54,7 +54,11 @@ const picker = new Emojik({
   width: '100%',
   height: '100%',
   fontFamily: '"Noto Color Emoji", "Segoe UI Emoji", system-ui',
-  fonturl: 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji'
+  fonturl: 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji',
+  i18n: {
+    search: "Search...",
+    recent: "Recent"
+  }
 });
 ```
 
@@ -118,7 +122,7 @@ const picker = new Emojik({
 | fonturl | https://fonts.googleapis.com/css2?family=Noto+Color+Emoji | Stylesheet to inject the font |
 | width | '100%' | Picker width |
 | height | '100%' | Picker height |
-
+| i18n | js Object | Strings to translate Emojik |
 
 ## Persistent Storage
 
