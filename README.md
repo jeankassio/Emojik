@@ -3,6 +3,8 @@
 **Emojik** is a modern, dependency-free emoji picker inspired by **WhatsApp Web**.  
 It features smooth category scrolling, persistent skin tones, automatic recents, local caching, and full JSON configurability.
 
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/dcd3edd5-7ff6-4d47-831b-b6777acef04d" />
+
 ---
 
 ## Features
