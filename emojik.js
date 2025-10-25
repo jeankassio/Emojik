@@ -1,5 +1,5 @@
 /*!
- * Emojik v0.9.3
+ * Emojik v0.9.4
  * by Jean Kássio
  *
  * More info:
@@ -216,7 +216,9 @@
 				</div>
 				<div class="ek-list"></div>
 			`;
-			(document.querySelector(this.opts.container) || document.body).appendChild(this.root);
+			if(this.opts.container){
+				document.querySelector(this.opts.container).replaceChildren(this.root);
+			}
 			this.tabs = this.root.querySelector('.ek-tabs');
 			this.search = this.root.querySelector('.ek-search');
 			this.list = this.root.querySelector('.ek-list');
