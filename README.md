@@ -63,6 +63,7 @@ const picker = new Emojik({
   height: '100%',
   fontFamily: '"Noto Color Emoji", "Segoe UI Emoji", system-ui',
   fonturl: 'https://fonts.googleapis.com/css2?family=Noto+Color+Emoji',
+  customFontInMobile: false,
   i18n: {
     search: "Search...",
     recent: "Recent"
@@ -128,6 +129,7 @@ const picker = new Emojik({
 | config | js object | Directly provide a config array (bypasses fetch) |
 | fontFamily | "Noto Color Emoji", "Segoe UI Emoji", system-ui | Emoji display font |
 | fonturl | https://fonts.googleapis.com/css2?family=Noto+Color+Emoji | Stylesheet to inject the font |
+| customFontInMobile | false | if the custom font is used in mobiles - Noto Colors Emoji usually causes a bug on mobile devices |
 | width | '100%' | Picker width |
 | height | '100%' | Picker height |
 | i18n | js Object | Strings to translate Emojik |
